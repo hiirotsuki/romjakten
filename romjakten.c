@@ -126,17 +126,6 @@ BOOL WINAPI ShowWindow_hook(HWND hWnd, int nCmdShow)
 		nCmdShow = SW_SHOWNORMAL;
 	}
 
-	/* just because I can, is there any better reason to do anything? */
-	if(GetWindowTextLengthA(hWnd) == 7)
-	{
-		char buffer[8];
-		GetWindowTextA(hWnd, buffer, 8);
-		if(!lstrcmp(buffer, "ROMJAKT"))
-		{
-			TRACE("Fixing up title\n");
-			SetWindowTextA(hWnd, "Romjakten");
-		}
-	}
 	return pShowWindow(hWnd, nCmdShow);
 }
 
