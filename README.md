@@ -7,7 +7,7 @@ Hooks the game's Import Address Table (IAT) to intercept Windows API calls:
 
 - `CreateWindowExA`: Hook and redirect the background window to be 640x480.
 - `GetSystemMetrics`: The game centers its 640x480 drawing area based on screen size, force the screen size to 640x480.
-- `ShowWindow`: Normalize maximize window calls, also change the window title (lol).
+- `ShowWindow`: Normalize maximize window calls.
 
 ## Usage
 1. Compile with your favorite C compiler targeting win32 or download from releases tab.
